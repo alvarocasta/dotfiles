@@ -1,0 +1,26 @@
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+
+alias showFreeSpace="df | grep /dev/disk1s1"
+alias emptycache="showFreeSpace && rm -rf ~/Library/Caches/carthage && yarn cache clean && npm cache verify && xcrun simctl delete unavailable && showFreeSpace"
+alias largeFolders="du -k ~/* | awk '$1 > 500000'"
+alias privateFolderLargeFolders="sudo du -k /private/var | awk '$1 > 500000'"
+
+alias habits='history -1000 -1 | sed "s/^[[:space:]]*[0-9]*[[:space:]]*//" | sort | uniq -c | sort -n -r | head -n 30'
+
+# Android Studio
+alias androidStudioHardClean='rm -rf ~/.gradle/caches ; ./gradlew --stop ; ./gradlew clean ; ./gradlew buildMultiDebug'export PATH="$HOME/lessonnine/development.cli/bin:$PATH"

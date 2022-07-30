@@ -1,4 +1,3 @@
-tap "caskroom/cask"
 tap "homebrew/bundle"
 tap "homebrew/core"
 
@@ -7,13 +6,16 @@ brew "bash"
 brew "bash-completion"
 brew "coreutils"
 brew "curl"
-brew "jpeg", args: ["universal"]
-brew "libusb-compat", args: ["universal"]
-brew "mas"
 brew "nvm"
-brew "avn"
 brew "wget"
 brew "yarn"
+brew 'rbenv'
+brew 'node'
+brew 'jq'
+brew 'gh'
+brew 'zsh'
+
+tap "caskroom/cask"
 
 # browsers
 cask "google-chrome"
@@ -23,16 +25,17 @@ cask "visual-studio-code"
 cask "android-studio"
 cask "sourcetree"
 cask "iterm2"
+cask 'sublime-text'
+cask 'docker'
+cask '1password'
 
 # mockup
-cask "sketch"
-cask "sketch-toolbox"
+cask "figma"
 
 # utilities
-cask "appcleaner"
 cask "caffeine"
-cask "osxfuse"
 cask "the-unarchiver"
+cask "rectangle"
 
 # communication
 cask "skype"

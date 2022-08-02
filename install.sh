@@ -13,19 +13,23 @@ e_success "brew updated done!"
 
 
 e_header "Setting exports"
-cp .exports ~/.exports
+ln -sf "$(pwd)/.exports" ~/.exports
 e_success "exports setup done!"
 
 e_header "Setting aliases"
-cp .aliases ~/.aliases
+ln -sf "$(pwd)/.aliases" ~/.aliases
 e_success "aliases setup done!"
 
-e_header "Setting private"
-cp .private ~/.private
+e_header "Setting private template"
+cp "$(pwd)/.private.template" ~/.private.template
 e_success "private setup done!"
 
+e_header "Setting gitconfig"
+ln -sf "$(pwd)/.gitconfig" ~/.gitconfig
+e_success "gitconfig setup done!"
+
 e_header "Setting zshrc"
-cp .zshrc ~/.zshrc
+ln -sf "$(pwd)/.zshrc" ~/.zshrc
 e_success "zshrc setup done!"
 
 # ZSH plugins

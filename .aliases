@@ -23,4 +23,4 @@ alias privateFolderLargeFolders="sudo du -k /private/var | awk '$1 > 500000'"
 alias habits='history -1000 -1 | sed "s/^[[:space:]]*[0-9]*[[:space:]]*//" | sort | uniq -c | sort -n -r | head -n 30'
 
 # Android Studio
-alias androidStudioHardClean='rm -rf ~/.gradle/caches ; ./gradlew --stop ; ./gradlew clean ; ./gradlew buildMultiDebug'export PATH="$HOME/lessonnine/development.cli/bin:$PATH"
+alias androidStudioHardClean='rm -rf ~/.gradle/caches ; ./gradlew --stop ; ./gradlew clean ; ./gradlew buildMultiDebug'

@@ -20,8 +20,7 @@ source $HOME/.exports
 source $HOME/.aliases
 source $HOME/.private
 
-# Loads NVM
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+eval "$(fnm env --use-on-cd)"  # This loads fnm
 
 eval "$(rbenv init -)"
 

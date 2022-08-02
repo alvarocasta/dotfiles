@@ -6,7 +6,7 @@ brew "bash"
 brew "bash-completion"
 brew "coreutils"
 brew "curl"
-brew "nvm"
+brew "fnm"
 brew "wget"
 brew "yarn"
 brew 'rbenv'
